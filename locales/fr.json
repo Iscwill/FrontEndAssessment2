@@ -1,0 +1,160 @@
+{
+  "banner": {
+    "btnStyle": "Environnement avec les meilleurs prix",
+    "tagline": {
+      "part1": "Investir",
+      "part2": "Mieux ensemble"
+    },
+    "taglineMid": "Combiner un trading transparent",
+    "taglineBottom": "Accéder au meilleur",
+    "altText": "Le père Noël volant"
+  },
+  "popularInstruments": {
+    "tagline": "Accéder au meilleur",
+    "heading": "Instruments Populaires",
+    "brands": {
+      "brand1": "Marque 1",
+      "brand2": "Marque 2",
+      "brand3": "Marque 3",
+      "brand4": "Marque 4",
+      "brand5": "Marque 5",
+      "brand6": "Marque 6",
+      "brand7": "Marque 7"
+    },
+    "forex": {
+      "alt": "Forex",
+      "title": "Forex",
+      "description": "Échangez plus de 100 paires de devises, y compris les principales, mineures et exotiques, avec des spreads ultra-faibles et une exécution rapide."
+    },
+    "preciousMetals": {
+      "alt": "Métaux Précieux",
+      "title": "Métaux Précieux",
+      "description": "Spéculer sur les mouvements de prix de l'or et de l'argent contre le dollar américain et diversifiez votre portefeuille de trading."
+    },
+    "stocks": {
+      "alt": "Actions",
+      "title": "Actions",
+      "description": "Accédez à des actions internationales majeures (Apple, Google, Tesla) sans commissions, sans nouvelles cotations et sans majorations cachées."
+    },
+    "energies": {
+      "alt": "Énergies",
+      "title": "Énergies",
+      "description": "Échangez des CFD sur les énergies au comptant telles que le pétrole Brent et le gaz naturel sans commissions ni nouvelles cotations et sans majorations cachées."
+    },
+    "stockIndices": {
+      "alt": "Indices Boursiers",
+      "title": "Indices Boursiers",
+      "description": "Accédez à des indices boursiers internationaux majeurs (S&P 500, Nasdaq 100) sans commissions, sans nouvelles cotations et sans majorations cachées."
+    },
+    "cryptocurrencies": {
+      "alt": "Cryptomonnaies",
+      "title": "Cryptomonnaies",
+      "description": "Échangez la nouvelle ère des devises telles que Bitcoin, Ethereum et Litecoin avec des spreads ultra-faibles et une exécution rapide."
+    },
+    "commodities": {
+      "alt": "Matières Premières",
+      "title": "Matières Premières",
+      "description": "Échangez une grande variété de matières premières (Coton, Cacao, Blé) avec des spreads ultra-faibles et une exécution rapide."
+    }
+  },
+  "brandIntroduce": {
+    "bullAlt": "Taureau",
+    "bearAlt": "Ours",
+    "mainCard": {
+      "title": "Présentation de la marque",
+      "heading": "100 % actions et 0 % commission",
+      "description": "Obtenez exactement ce que vous payez avec l'investissement en actions sans commission.",
+      "button": "Explorer"
+    },
+    "secondCard": {
+      "title": "L'environnement parfait pour les conseillers experts (EA)",
+      "description": "Nous avons créé l'environnement parfait pour que les EA prospèrent - nous permettons le scalping, la couverture, le trading d'actualités et plus encore. Pas de nouvelles cotations et aucune distance minimale de stop loss."
+    },
+    "thirdCard": {
+      "title": "Dépôts instantanés. Retraits rapides.",
+      "description": "Alimentez votre compte facilement et en toute sécurité grâce à notre large gamme d'options de paiement. Vos fonds sont conservés en toute sécurité dans les banques de niveau 1."
+    }
+  },
+  "instrumentTable": {
+    "heading": "*Tableau des Instruments",
+    "leftSection": {
+      "subtitle": "Prenez Votre Décision",
+      "title": "Tradez sur Plus de 5600 Marchés Mondiaux.",
+      "description": "Nous offrons deux niveaux de tarification selon votre niveau de compte.",
+      "searchPlaceholder": "Rechercher par symbole...",
+      "deposit": "Dépôt Minimum",
+      "security": "Sécurité des Fonds",
+      "leverage": "Effet de Levier Maximal",
+      "fundingOptions": "Option Financement",
+      "instruments": "Instruments de Trading",
+      "executionSpeed": "Vitesse d'Exécution"
+    },
+    "tableHeaders": {
+      "symbol": "Symbole",
+      "bid": "Offre",
+      "ask": "Demande",
+      "dailyChange": "Variation Quotidienne"
+    }
+  },
+  "investmentDecision": {
+    "subtitle": "Faites votre mouvement",
+    "title": "Prenez des décisions d'investissement intelligentes avec la marque",
+    "features": {
+      "dailyMarketReviews": "Revue quotidienne du marché",
+      "tradingTools": "Outils de trading exclusifs",
+      "technicalAnalysis": "Analyse technique de Central",
+      "economicCalendar": "Calendrier des données économiques et des gains"
+    },
+    "alt": {
+      "mobilePhone": "Téléphone mobile"
+    }
+  },
+  "steps": {
+    "subtitle": "Comment commencer",
+    "title": "Commencez gratuitement en 4 étapes",
+    "alt": {
+      "image": "Illustration pour commencer"
+    },
+    "steps": {
+      "register": {
+        "title": "S'inscrire",
+        "description": "Ouvrez un compte en remplissant vos informations."
+      },
+      "verify": {
+        "title": "Vérifier",
+        "description": "Téléchargez vos document(s) pour une vérification rapide."
+      },
+      "fund": {
+        "title": "Financer",
+        "description": "Financez votre compte avec votre méthode de paiement choisie."
+      },
+      "trade": {
+        "title": "Trader",
+        "description": "Débloquez des milliers d'instruments et commencez à investir."
+      }
+    }
+  },
+   "footer": {
+    "language": "Français (Malaisie)",
+    "paragraph1": "Lorem Ipsum est simplement un texte factice de l'industrie de l'impression et de la composition. Lorem Ipsum est le texte factice standard de l'industrie depuis les années 1500, lorsqu'un imprimeur inconnu a pris une galée de type et l'a brouillée pour en faire un spécimen de livre. Il a survécu non seulement cinq siècles, mais aussi le passage à la composition électronique, restant essentiellement inchangé. Il a été popularisé dans les années 1960 avec la sortie de feuilles Letraset contenant des passages de Lorem Ipsum, et plus récemment avec des logiciels de publication assistée par ordinateur comme Aldus PageMaker incluant des versions de Lorem Ipsum.",
+    "paragraph2": "Lorem Ipsum est simplement un texte factice de l'industrie de l'impression et de la composition. Lorem Ipsum est le texte factice standard de l'industrie depuis les années 1500, lorsqu'un imprimeur inconnu a pris une galée de type et l'a brouillée pour en faire un spécimen de livre. Il a survécu non seulement cinq siècles, mais aussi le passage à la composition électronique, restant essentiellement inchangé.",
+    "paragraph3": "Lorem Ipsum est simplement un texte factice de l'industrie de l'impression et de la composition. Lorem Ipsum est le texte factice standard de l'industrie depuis les années 1500, lorsqu'un imprimeur inconnu a pris une galée de type et l'a brouillée pour en faire un spécimen de livre. Il a survécu non seulement cinq siècles, mais aussi le passage à la composition électronique, restant essentiellement inchangé. Il a été popularisé dans les années 1960 avec la sortie de feuilles Letraset contenant des passages de Lorem Ipsum, et plus récemment avec des logiciels de publication assistée par ordinateur comme Aldus PageMaker incluant des versions de Lorem Ipsum."
+  },
+  "nav": {
+    "logo": "Logo",
+    "buttons": {
+      "demo": "Démo",
+      "login": "Connexion",
+      "signup": "Inscription"
+    },
+    "menu": {
+      "trading": "Commerce",
+      "platforms": "Plateformes",
+      "clientTools": "Outils Clients",
+      "promotions": "Promotions",
+      "research": "Recherche",
+      "partnerships": "Partenariats",
+      "aboutUs": "À Propos"
+    }
+  }
+}

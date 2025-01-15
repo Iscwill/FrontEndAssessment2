@@ -1,0 +1,160 @@
+{
+  "banner": {
+    "btnStyle": "Environment With The Best Pricing",
+    "tagline": {
+      "part1": "Invest",
+      "part2": "Better Together"
+    },
+    "taglineMid": "Combining A Transparent Trading",
+    "taglineBottom": "Access To The Most",
+    "altText": "Santa flying"
+  },
+  "popularInstruments": {
+    "tagline": "Access To The Most",
+    "heading": "Popular Instruments",
+    "brands": {
+      "brand1": "Brand 1",
+      "brand2": "Brand 2",
+      "brand3": "Brand 3",
+      "brand4": "Brand 4",
+      "brand5": "Brand 5",
+      "brand6": "Brand 6",
+      "brand7": "Brand 7"
+    },
+    "forex": {
+      "alt": "Forex",
+      "title": "Forex",
+      "description": "Trade over 100 currency pairs, including the majors, minors and exotics, with ultra-low spreads and fast execution."
+    },
+    "preciousMetals": {
+      "alt": "Precious Metals",
+      "title": "Precious Metals",
+      "description": "Speculate on the price movements of Gold and Silver against the US Dollar and diversify your trading portfolio."
+    },
+    "stocks": {
+      "alt": "Stocks",
+      "title": "Stocks",
+      "description": "Get access to major international stocks (Apple, Google, Tesla) with no commissions or requotes and no hidden mark-ups."
+    },
+    "energies": {
+      "alt": "Energies",
+      "title": "Energies",
+      "description": "Trade CFDs on spot energies such as Brent oil and natural gas with no commissions or requotes and no hidden mark-ups."
+    },
+    "stockIndices": {
+      "alt": "Stock Indices",
+      "title": "Stock Indices",
+      "description": "Get access to major international stock indices (S&P 500, Nasdaq 100) with no commissions or requotes and no hidden mark-ups."
+    },
+    "cryptocurrencies": {
+      "alt": "Cryptocurrencies",
+      "title": "Cryptocurrencies",
+      "description": "Trade the new era of currencies such as Bitcoin, Etherium and Litecoin with ultra-low spreads and fast execution."
+    },
+    "commodities": {
+      "alt": "Commodities",
+      "title": "Commodities",
+      "description": "Trade over a vast variety of commodities (Cotton, Cocoa, Wheat) with ultra-low spreads and fast execution."
+    }
+  },
+  "brandIntroduce": {
+    "bullAlt": "Bull",
+    "bearAlt": "Bear",
+    "mainCard": {
+      "title": "Brand Introduce",
+      "heading": "100% Stocks & 0% Commission",
+      "description": "Get exactly what you're paying for the commission-free stock investing.",
+      "button": "Explore"
+    },
+    "secondCard": {
+      "title": "The Perfect Environment For Expert Advisors (EA)",
+      "description": "We've built the perfect environment for EAs to thrive - we allow scalping, hedging, news trading and more. No requotes and no minimum stop loss distance."
+    },
+    "thirdCard": {
+      "title": "Instant Deposits. Fast Withdrawals.",
+      "description": "Fund your account easily and securely through our wide range of payment options. Your funds are held securely in Tier 1 banks."
+    }
+  },
+  "instrumentTable": {
+    "heading": "*Instrument table",
+    "leftSection": {
+      "subtitle": "Make Your Move",
+      "title": "Trade Over 5600 Global Markets.",
+      "description": "We Offer Two Levels Of Pricing Depending On Your Account Tier.",
+      "searchPlaceholder": "Search Market",
+      "deposit": "Minimum Deposit",
+      "security": "Security of Funds",
+      "leverage": "Max Leverage",
+      "fundingOptions": "Funding Options",
+      "instruments": "Trading Instruments",
+      "executionSpeed": "Execution Speed"
+    },
+    "tableHeaders": {
+      "symbol": "Symbol",
+      "bid": "Bid",
+      "ask": "Ask",
+      "dailyChange": "Daily Change"
+    }
+  },
+  "investmentDecision": {
+    "subtitle": "Make Your Move",
+    "title": "Make Smart Investment Decisions With Brand",
+    "features": {
+      "dailyMarketReviews": "Daily Market Reviews",
+      "tradingTools": "Exclusive Trading Tools",
+      "technicalAnalysis": "Technical Analysis From Central",
+      "economicCalendar": "Economic Data Earnings Calendar"
+    },
+    "alt": {
+      "mobilePhone": "Mobile Phone"
+    }
+  },
+  "steps": {
+    "subtitle": "How To Get Started",
+    "title": "Start Free In 4 Steps",
+    "alt": {
+      "image": "Get Started Illustration"
+    },
+    "steps": {
+      "register": {
+        "title": "Register",
+        "description": "Open an account by filling in your details."
+      },
+      "verify": {
+        "title": "Verify",
+        "description": "Upload your document(s) for fast verification."
+      },
+      "fund": {
+        "title": "Fund",
+        "description": "Fund your account with your chosen payment method."
+      },
+      "trade": {
+        "title": "Trade",
+        "description": "Unlock thousands of instruments and start investing."
+      }
+    }
+  },
+  "footer": {
+    "language": "English (Malaysia)",
+    "paragraph1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+    "paragraph2": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.",
+    "paragraph3": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+  },
+  "nav": {
+    "logo": "Logo",
+    "buttons": {
+      "demo": "Demo",
+      "login": "Login",
+      "signup": "Sign Up"
+    },
+    "menu": {
+      "trading": "Trading",
+      "platforms": "Platforms",
+      "clientTools": "Client Tools",
+      "promotions": "Promotions",
+      "research": "Research",
+      "partnerships": "Partnerships",
+      "aboutUs": "About Us"
+    }
+  }
+}
