@@ -37,15 +37,45 @@ self.addEventListener("activate", (event) => {
 
 // Fetch Event
 self.addEventListener("fetch", (event) => {
-  event.respondWith(
-    fetch(event.request)
-      .then((networkResponse) => {
-        const clonedResponse = networkResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, clonedResponse);
-        });
-        return networkResponse;
+  const requestUrl = new URL(event.request.url);
+
+  // Skip fonts.gstatic.com and fonts.googleapis.com from being intercepted
+  if (
+    requestUrl.hostname === "fonts.gstatic.com" ||
+    requestUrl.hostname === "fonts.googleapis.com"
+  ) {
+    return;
+  }
+
+  // Handle static assets from the cache (cache-first strategy)
+  if (ASSETS.includes(requestUrl.pathname)) {
+    event.respondWith(
+      caches.match(event.request).then((cachedResponse) => {
+        return cachedResponse || fetch(event.request);
       })
-      .catch(() => caches.match(event.request)) // Fallback to cache if offline
+    );
+    return;
+  }
+
+  // Handle API requests (network-first strategy)
+  if (requestUrl.pathname.startsWith("/api")) {
+    event.respondWith(
+      fetch(event.request)
+        .then((networkResponse) => {
+          const clonedResponse = networkResponse.clone();
+          caches.open(CACHE_NAME).then((cache) => {
+            cache.put(event.request, clonedResponse);
+          });
+          return networkResponse;
+        })
+        .catch(() => caches.match(event.request)) // Fallback to cache if offline
+    );
+    return;
+  }``
+
+  // Default fetch behavior
+  event.respondWith(
+    fetch(event.request).catch(() => caches.match(event.request))
   );
 });
+
