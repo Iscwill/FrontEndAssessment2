@@ -39,14 +39,6 @@ self.addEventListener("activate", (event) => {
 self.addEventListener("fetch", (event) => {
   const requestUrl = new URL(event.request.url);
 
-  // Skip fonts.gstatic.com and fonts.googleapis.com from being intercepted
-  if (
-    requestUrl.hostname === "fonts.gstatic.com" ||
-    requestUrl.hostname === "fonts.googleapis.com"
-  ) {
-    return;
-  }
-
   // Handle static assets from the cache (cache-first strategy)
   if (ASSETS.includes(requestUrl.pathname)) {
     event.respondWith(
@@ -71,11 +63,10 @@ self.addEventListener("fetch", (event) => {
         .catch(() => caches.match(event.request)) // Fallback to cache if offline
     );
     return;
-  }``
+  }
 
   // Default fetch behavior
   event.respondWith(
     fetch(event.request).catch(() => caches.match(event.request))
   );
 });
-
