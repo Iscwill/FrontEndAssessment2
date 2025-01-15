@@ -1,4 +1,5 @@
 "use client";
+
 import "@styles/globals.css";
 import Nav from "@components/Nav";
 import { RecoilRoot } from "recoil";
@@ -7,66 +8,34 @@ import "../i18n/i18n";
 import { useEffect, useState } from "react";
 
 const RootLayout = ({ children }) => {
-  const [showPrompt, setShowPrompt] = useState(false);
+  const [isUpdateAvailable, setIsUpdateAvailable] = useState(false);
 
   useEffect(() => {
-    // Service Worker Registration
     if ("serviceWorker" in navigator) {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then(() => console.log("✅ Service Worker Registered"))
-        .catch((err) =>
-          console.error("❌ Service Worker Registration Failed:", err)
-        );
-    } else {
-      console.error("❌ Service Worker is not supported in this browser");
-    }
-  }, []);
+      navigator.serviceWorker.register("/sw.js").then((registration) => {
+        console.log("✅ Service Worker Registered");
 
-  useEffect(() => {
-    // Debugging beforeinstallprompt
-    const handleBeforeInstallPrompt = (e) => {
-      console.log("✅ beforeinstallprompt event fired!");
-      e.preventDefault(); // Prevent the default prompt
-      window.deferredPrompt = e; // Save the event for later
-      setTimeout(() => {
-        console.log("✅ Showing Install App button after 5 seconds");
-        setShowPrompt(true); // Show the button
-      }, 5000);
-    };
+        registration.onupdatefound = () => {
+          const installingWorker = registration.installing;
 
-    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
-
-    // Log if the browser doesn't fire beforeinstallprompt
-    window.addEventListener("appinstalled", () => {
-      console.log("✅ App successfully installed");
-    });
-
-    return () => {
-      window.removeEventListener(
-        "beforeinstallprompt",
-        handleBeforeInstallPrompt
-      );
-    };
-  }, []);
-
-  const handleInstallPrompt = () => {
-    if (window.deferredPrompt) {
-      console.log("✅ Install prompt triggered");
-      window.deferredPrompt.prompt(); // Show the install prompt
-      window.deferredPrompt.userChoice.then((choiceResult) => {
-        console.log("✅ User choice:", choiceResult.outcome);
-        if (choiceResult.outcome === "accepted") {
-          console.log("🎉 User accepted the install prompt");
-        } else {
-          console.log("❌ User dismissed the install prompt");
-        }
-        window.deferredPrompt = null; // Reset the prompt
-        setShowPrompt(false); // Hide the button
+          if (installingWorker) {
+            installingWorker.onstatechange = () => {
+              if (
+                installingWorker.state === "installed" &&
+                navigator.serviceWorker.controller
+              ) {
+                console.log("⚠️ New update available!");
+                setIsUpdateAvailable(true);
+              }
+            };
+          }
+        };
       });
-    } else {
-      console.error("❌ No deferredPrompt found");
     }
+  }, []);
+
+  const reloadPage = () => {
+    window.location.reload();
   };
 
   return (
@@ -82,14 +51,12 @@ const RootLayout = ({ children }) => {
           <main className="app">
             <Nav />
             {children}
-
-            {/* Add the Install App Button */}
-            {showPrompt && (
+            {isUpdateAvailable && (
               <div
                 className="fixed bottom-5 right-5 bg-red-500 text-white py-2 px-4 rounded shadow-md cursor-pointer hover:bg-red-600 transition"
-                onClick={handleInstallPrompt}
+                onClick={reloadPage}
               >
-                Install App
+                Update Available - Refresh
               </div>
             )}
           </main>

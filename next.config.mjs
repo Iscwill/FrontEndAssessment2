@@ -3,6 +3,15 @@ export default {
   async headers() {
     return [
       {
+        source: "/_next/static/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "no-store, must-revalidate", // Disable caching for dynamic files
+          },
+        ],
+      },
+      {
         source: "/(.*)",
         headers: [
           {
@@ -13,8 +22,8 @@ export default {
               font-src 'self' https://fonts.gstatic.com;
               style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
               script-src 'self' 'unsafe-eval' 'unsafe-inline';
-              img-src 'self' data:;
-            `.replace(/\s{2,}/g, " "), // Minify the policy by removing extra spaces
+              img-src 'self' data: blob:;
+            `.replace(/\s{2,}/g, " "),
           },
           {
             key: "X-Content-Type-Options",
