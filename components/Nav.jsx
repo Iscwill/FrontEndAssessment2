@@ -113,7 +113,7 @@ const Nav = () => {
 
       {/* Hamburger Menu (Visible only for smaller screens) */}
       {isMenuOpen && (
-        <div className="fixed inset-0 bg-white z-50 flex flex-col items-center gap-6 p-4 overflow-hidden">
+        <div className="fixed inset-0 bg-white z-50 flex flex-col items-center gap-6 p-4 w-full overflow-hidden">
           {/* Close Button */}
           <button
             className="absolute top-4 right-4 text-xl"

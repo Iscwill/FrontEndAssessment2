@@ -22,7 +22,7 @@ const Banner = () => {
 
   return (
     <div
-      className="banner-container h-48 md:h-96 w-full relative mt-0 md:mt-6 overflow-hidden"
+      className="banner-container w-full sm:h-[200px] md:h-[300px] lg:h-[350px] overflow-hidden"
       onMouseMove={handleMouseMove} // Track mouse movement
     >
       {/* Background */}
@@ -39,9 +39,8 @@ const Banner = () => {
 
       {/* Mountains */}
       <div
-        className="mountains absolute bottom-[-10px] h-[96px] md:h-[160px] lg:h-[220px] overflow-hidden"
+        className="mountains absolute w-full h-[96px] md:h-[160px] lg:h-[200px] 2xl:h-[350px] sm:bottom-[-10px] md:bottom-[-30px] lg:bottom-[-10px] 2xl:bottom-[-110px] overflow-hidden"
         style={{
-          width: "100vw", // Make mountains span the full width of the viewport
           transform: animationComplete
             ? `translate(${mousePosition.x * 0.2}px, ${
                 mousePosition.y * 0.3
@@ -53,7 +52,7 @@ const Banner = () => {
 
       {/* Santa Image */}
       <img
-        className="santa hidden md:block md:absolute md:top-[30%] md:right-[-15vw] lg:top-[20%] lg:right-[-10vw] md:w-[400px] lg:w-[600px] h-auto"
+        className="santa hidden xl:block md:absolute md:top-[30%] md:right-[-15vw] lg:top-[20%] lg:right-[-10vw] md:w-[400px] lg:w-[600px] h-auto"
         src="/background/santa.png"
         alt={t("banner.altText")}
         onAnimationEnd={handleAnimationEnd} // Trigger parallax enablement after animation ends
@@ -67,7 +66,7 @@ const Banner = () => {
       />
 
       {/* Banner Content */}
-      <div className="banner_header relative z-10 px-4 md:px-10 lg:px-20 text-left">
+      <div className="banner_header relative z-10 px-4 md:px-10 lg:px-20 text-left 2xl:top-[-50px]">
         {/* Button */}
         <p className="banner_btn_style rounded-lg w-[100px] md:w-[200px] lg:w-[240px] lg:text-[11px] text-[5px]">
           {t("banner.btnStyle")}

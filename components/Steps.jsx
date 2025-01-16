@@ -7,9 +7,9 @@ const Steps = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative flex flex-col md:flex-row items-start justify-between w-full py-16 px-6 sm:px-10 md:px-20 lg:px-[40px]">
+    <div className="flex flex-col md:flex-row items-start justify-between ">
       {/* Left Section */}
-      <div className="flex flex-col items-start w-full md:w-[60%] lg:w-[55%]">
+      <div className="flex flex-col items-start md:w-[60%] lg:w-[55%]">
         <h2 className="text-red-500 font-semibold text-lg sm:text-xl mb-2">
           {t("steps.subtitle")}
         </h2>
@@ -26,7 +26,7 @@ const Steps = () => {
       </div>
 
       {/* Right Section */}
-      <div className="flex flex-col items-start w-full md:w-[40%] lg:w-[35%] relative md:top-[50px] lg:top-[100px] md:left-0 lg:left-[50px]">
+      <div className="flex flex-col items-start md:w-[40%] lg:w-[35%] relative md:top-[50px] lg:top-[100px] md:left-0 lg:left-[50px]">
         {/* Step 1 */}
         <div className="flex items-start">
           <div className="flex flex-col items-center">

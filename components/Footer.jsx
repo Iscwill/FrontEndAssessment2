@@ -9,7 +9,7 @@ const Footer = () => {
   const { t } = useTranslation();
 
   return (
-    <footer className="py-8 px-6">
+    <footer>
       <div className="flex flex-col md:flex-row justify-between items-start md:items-center pb-6 mb-6">
         {/* Language */}
         <div className="flex items-center space-x-2 mb-6 md:mb-0">

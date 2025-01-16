@@ -7,7 +7,7 @@ const InvestmentDecision = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative w-full bg-white overflow-hidden">
+    <div className="relative w-full bg-white overflow-hidden flex justify-center ">
       {/* Background Image */}
       <div className="absolute inset-0 hidden lg:block">
         <div
@@ -17,9 +17,9 @@ const InvestmentDecision = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col lg:flex-row items-center justify-between h-auto py-12 px-4 sm:px-6 md:py-16 md:px-20 lg:px-40">
+      <div className="relative z-10 flex flex-col lg:flex-row h-auto py-12 px-4 sm:px-6 md:py-16 md:px-20 lg:px-40 w-[80%]">
         {/* Left Card */}
-        <div className="relative investment_card p-6 sm:p-12 lg:p-20 w-full md:w-1/2 lg:w-[800px] lg:top-[40px] lg:h-[400px]">
+        <div className="relative investment_card p-[16px] sm:p-5 lg:p-20 md:w-[600px] lg:w-[800px] lg:top-[40px] lg:left-[-150px] 2xl:left-[10%] lg:h-[450px]">
           <h2 className="mb-4">{t("investmentDecision.subtitle")}</h2>
           <h1 className=" mb-6 w-[60%]">{t("investmentDecision.title")}</h1>
           <ul className="space-y-2">
@@ -54,7 +54,7 @@ const InvestmentDecision = () => {
         <img
           src="/background/mobile-phone.png"
           alt={t("investmentDecision.alt.mobilePhone")}
-          className="hidden xl:block lg:absolute lg:bottom-[-20%] lg:right-[240px] w-[120px] sm:w-[180px] md:w-[200px] lg:w-[300px] lg:top-[100px]"
+          className="hidden xl:block lg:absolute lg:bottom-[-20%] lg:right-[50px] 2xl:right-[20%] w-[120px] sm:w-[180px] md:w-[200px] lg:w-[300px] lg:top-[100px]"
         />
       </div>
     </div>

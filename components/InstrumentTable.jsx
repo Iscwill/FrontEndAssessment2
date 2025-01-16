@@ -20,54 +20,36 @@ const InstrumentTable = () => {
   const { t } = useTranslation();
   const rowsPerPage = 10;
 
-  // Fetch Data Function
-  const fetchData = async () => {
-    try {
-      const response = await fetch(
-        "http://18.143.79.95/api/priceData/technical-test"
-      );
-      const result = await response.json();
-
-      // Sort the data by Symbol for consistency
-      const sortedData = result.sort((a, b) =>
-        a.Symbol.localeCompare(b.Symbol)
-      );
-
-      // Update previous and current data
-      setPreviousData(data); // Store the previous state for comparison
-      setData(sortedData);
-
-      if (isInitialLoad) {
-        // Stop showing loader after initial load
-        setTimeout(() => setIsInitialLoad(false), 1000); // Optional delay for smooth UI
-      }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
-  };
-
   useEffect(() => {
-    // Initial Fetch
-    fetchData();
+    const fetchData = async () => {
+      try {
+        const response = await fetch(
+          "http://18.143.79.95/api/priceData/technical-test"
+        );
+        const result = await response.json();
 
-    // Periodic Fetch
+        // Sort the data by Symbol for consistency
+        const sortedData = result.sort((a, b) =>
+          a.Symbol.localeCompare(b.Symbol)
+        );
+
+        // Update previous and current data
+        setPreviousData(data); // Store the previous state for comparison
+        setData(sortedData);
+
+        if (isInitialLoad) {
+          // Stop showing loader after initial load
+          setTimeout(() => setIsInitialLoad(false), 1000); // Optional delay for smooth UI
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData(); // Initial fetch
     const interval = setInterval(fetchData, 3000); // Periodic updates
     return () => clearInterval(interval); // Cleanup interval
   }, [isInitialLoad]); // Remove data from dependency to avoid constant re-fetching
-
-  useEffect(() => {
-    // Listen for refreshTable event to trigger fetchData
-    const refreshTableListener = () => {
-      console.log("Refreshing table data...");
-      fetchData(); // Re-trigger the data fetch
-    };
-
-    window.addEventListener("refreshTable", refreshTableListener);
-
-    return () => {
-      window.removeEventListener("refreshTable", refreshTableListener);
-    };
-  }, []); // Empty dependency array ensures this runs once
 
   // Filter the data based on search input
   const filteredData = data.filter((item) =>

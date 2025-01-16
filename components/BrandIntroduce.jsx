@@ -6,7 +6,7 @@ const BrandIntroduce = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="relative py-16 px-4 w-[350px] lg:w-full">
+    <div className="relative w-[350px] lg:w-full">
       <div className="relative ">
         {/* Image Container */}
         <div className="absolute flex w-full justify-between items-center">
