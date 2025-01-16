@@ -31,13 +31,16 @@ const RootLayout = ({ children }) => {
           }
         };
       });
+
+      // Listen for service worker messages
+      navigator.serviceWorker.addEventListener("message", (event) => {
+        if (event.data.type === "SW_ACTIVATED") {
+          console.log("Service worker activated! Reloading table...");
+          window.location.reload(); // Trigger page reload when SW activates
+        }
+      });
     }
   }, []);
-
-  const reloadPage = () => {
-    window.location.reload();
-  };
-
   return (
     <html lang="en">
       <head>

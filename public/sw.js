@@ -34,43 +34,42 @@ self.addEventListener("activate", (event) => {
     })
   );
   self.clients.claim(); // Claim any clients immediately
+
+  // Notify the client that the service worker is ready
+  self.clients.matchAll({ type: "window" }).then((clients) => {
+    clients.forEach((client) => {
+      client.postMessage({ type: "SW_ACTIVATED" });
+    });
+  });
 });
 
-// Fetch Event
 // Fetch Event
 self.addEventListener("fetch", (event) => {
   const requestUrl = new URL(event.request.url);
 
-  // Skip caching for dynamic resources in development
-  if (
-    requestUrl.pathname.startsWith("/_next/static") ||
-    requestUrl.pathname.endsWith(".js") ||
-    requestUrl.pathname.endsWith(".css")
-  ) {
-    event.respondWith(fetch(event.request)); // Always fetch from the network
-    return;
-  }
-
-  // Cache-first for static assets
-  if (ASSETS.includes(requestUrl.pathname)) {
+  // Network-first strategy for API requests or dynamic resources
+  if (requestUrl.pathname.startsWith("/api")) {
     event.respondWith(
-      caches.match(event.request).then((cachedResponse) => {
-        return cachedResponse || fetch(event.request);
-      })
+      fetch(event.request)
+        .then((networkResponse) => {
+          // Cache the latest API response
+          return caches.open("api-cache").then((cache) => {
+            cache.put(event.request, networkResponse.clone());
+            return networkResponse;
+          });
+        })
+        .catch(() => {
+          // Fallback to cache if network fails
+          return caches.match(event.request);
+        })
     );
     return;
   }
 
-  // Network-first for everything else (e.g., API requests)
+  // Default behavior for other static assets
   event.respondWith(
-    fetch(event.request)
-      .then((networkResponse) => {
-        const clonedResponse = networkResponse.clone();
-        caches.open(CACHE_NAME).then((cache) => {
-          cache.put(event.request, clonedResponse);
-        });
-        return networkResponse;
-      })
-      .catch(() => caches.match(event.request)) // Fallback to cache if offline
+    caches.match(event.request).then((cachedResponse) => {
+      return cachedResponse || fetch(event.request);
+    })
   );
 });
