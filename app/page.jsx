@@ -15,7 +15,7 @@ const Home = () => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto w-full my-[20px] px-[15px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[1200px] 2xl:max-w-[1260px]">
+      <div className="container mx-auto w-full my-[20px] px-[15px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[1200px] 2xl:max-w-[1250px]">
         <PopularIntruments />
       </div>
 
@@ -23,7 +23,7 @@ const Home = () => {
         <BrandIntroduce />
       </div>
 
-      <div className="container mx-auto w-full px-[15px] my-[20px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[1200px] 2xl:max-w-[1260px]">
+      <div className="container mx-auto w-full px-[15px] my-[20px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[1200px] 2xl:max-w-[1250px]">
         <InstrumentTable />
       </div>
 
@@ -31,11 +31,11 @@ const Home = () => {
 
       {/* Steps and Footer */}
 
-      <div className="container w-full px-[15px] my-[20px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[1200px]  2xl:max-w-[1260px]">
+      <div className="container w-full px-[15px] my-[20px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[1200px]  2xl:max-w-[1250px]">
         <Steps />
       </div>
 
-      <div className="container w-full px-[15px] md:mt-[100px] 2xl:mt-[10px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[1200px] 2xl:max-w-[1260px]">
+      <div className="container w-full px-[15px] md:mt-[100px] 2xl:mt-[10px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[1200px] 2xl:max-w-[1250px]">
         <Footer />
       </div>
     </section>
