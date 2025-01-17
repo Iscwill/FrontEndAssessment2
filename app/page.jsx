@@ -35,7 +35,7 @@ const Home = () => {
         <Steps />
       </div>
 
-      <div className="container w-full px-[15px] md:mt-[100px] 2xl:mt-[10px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[1200px] 2xl:max-w-[1250px]">
+      <div className="container w-full px-[15px] md:mt-[100px] 2xl:mt-[10px] sm:max-w-[540px] md:max-w-[720px] lg:max-w-[1200px] 2xl:max-w-[1260px]">
         <Footer />
       </div>
     </section>
