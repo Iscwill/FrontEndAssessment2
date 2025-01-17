@@ -9,6 +9,8 @@ import { useEffect, useState } from "react";
 
 const RootLayout = ({ children }) => {
   const [isUpdateAvailable, setIsUpdateAvailable] = useState(false);
+  const [installPrompt, setInstallPrompt] = useState(null);
+  const [showInstallButton, setShowInstallButton] = useState(false);
 
   useEffect(() => {
     if ("serviceWorker" in navigator) {
@@ -40,7 +42,43 @@ const RootLayout = ({ children }) => {
         }
       });
     }
+
+    // Handle beforeinstallprompt event
+    const handleBeforeInstallPrompt = (event) => {
+      event.preventDefault(); // Prevent the default browser install prompt
+      setInstallPrompt(event); // Save the event to trigger it later
+      setShowInstallButton(true); // Show the custom install button
+    };
+
+    window.addEventListener("beforeinstallprompt", handleBeforeInstallPrompt);
+
+    return () => {
+      window.removeEventListener(
+        "beforeinstallprompt",
+        handleBeforeInstallPrompt
+      );
+    };
   }, []);
+
+  const handleInstallClick = () => {
+    if (installPrompt) {
+      installPrompt.prompt(); // Show the install prompt
+      installPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === "accepted") {
+          console.log("✅ User accepted the install prompt!");
+        } else {
+          console.log("❌ User dismissed the install prompt.");
+        }
+        setInstallPrompt(null); // Clear the saved prompt
+        setShowInstallButton(false); // Hide the button
+      });
+    }
+  };
+
+  const reloadPage = () => {
+    window.location.reload(); // Reload the page
+  };
+
   return (
     <html lang="en">
       <head>
@@ -54,12 +92,24 @@ const RootLayout = ({ children }) => {
           <main className="app">
             <Nav />
             {children}
+
+            {/* Show update available message */}
             {isUpdateAvailable && (
               <div
                 className="fixed bottom-5 right-5 bg-red-500 text-white py-2 px-4 rounded shadow-md cursor-pointer hover:bg-red-600 transition"
                 onClick={reloadPage}
               >
                 Update Available - Refresh
+              </div>
+            )}
+
+            {/* Show "Add to Home Screen" button */}
+            {showInstallButton && (
+              <div
+                className="fixed bottom-5 left-5 bg-blue-500 text-white py-2 px-4 rounded shadow-md cursor-pointer hover:bg-blue-600 transition"
+                onClick={handleInstallClick}
+              >
+                Add to Home Screen
               </div>
             )}
           </main>
