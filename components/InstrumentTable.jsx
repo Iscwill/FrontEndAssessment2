@@ -23,9 +23,7 @@ const InstrumentTable = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          "http://18.143.79.95/api/priceData/technical-test"
-        );
+       const response = await fetch("/api");
         const result = await response.json();
 
         // Sort the data by Symbol for consistency
