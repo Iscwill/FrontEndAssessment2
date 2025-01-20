@@ -93,20 +93,20 @@ const RootLayout = ({ children }) => {
             <Nav />
             {children}
 
-            {/* Update Available Button */}
+            {/* Show update available message */}
             {isUpdateAvailable && (
               <div
-                className="fixed bottom-6 right-6 bg-red-600 text-white py-2 px-6 rounded-lg shadow-md cursor-pointer hover:bg-red-700 transition-all"
+                className="fixed bottom-5 right-5 bg-red-500 text-white py-2 px-4 rounded shadow-md cursor-pointer hover:bg-red-600 transition"
                 onClick={reloadPage}
               >
                 Update Available - Refresh
               </div>
             )}
 
-            {/* Add to Home Screen Button */}
+            {/* Show "Add to Home Screen" button */}
             {showInstallButton && (
               <div
-                className="fixed bottom-6 left-6 bg-blue-500 text-white py-2 px-6 rounded-lg shadow-md cursor-pointer hover:bg-blue-600 transition-all w-fit"
+                className="fixed bottom-5 left-5 bg-blue-500 text-white py-2 px-4 rounded shadow-md cursor-pointer hover:bg-blue-600 transition"
                 onClick={handleInstallClick}
               >
                 Add to Home Screen
