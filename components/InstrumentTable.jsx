@@ -133,7 +133,7 @@ const InstrumentTable = () => {
               <i className="fas fa-search"></i> {/* Replace with your icon */}
             </button>
           </div>
-          <div className="grid grid-cols-2 gap-4 mt-20">
+          <div className="grid grid-cols-2 gap-4 sm:mt-6 md:mt-20">
             <div>
               <p className="text-2xl">$100</p>
               <p className="text-sm">
