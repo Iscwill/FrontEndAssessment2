@@ -17,7 +17,7 @@ const InvestmentDecision = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 flex flex-col lg:flex-row h-auto py-12 px-4 sm:px-6 md:py-16 md:px-20 lg:px-40 w-[80%]">
+      <div className="relative z-10 flex flex-col lg:flex-row h-auto md:py-16 md:px-20 lg:px-40  sm:w-[90%] md:w-[80%]">
         {/* Left Card */}
         <div className="relative investment_card p-[16px] sm:p-5 lg:p-20 md:w-[600px] lg:w-[800px] lg:top-[40px] lg:left-[-150px] 2xl:left-[10%] lg:h-[450px]">
           <h2 className="mb-4">{t("investmentDecision.subtitle")}</h2>

@@ -26,7 +26,7 @@ const Steps = () => {
       </div>
 
       {/* Right Section */}
-      <div className="flex flex-col items-start md:w-[40%] lg:w-[35%] relative md:top-[50px] lg:top-[100px] md:left-0 lg:left-[50px]">
+      <div className="flex flex-col items-start md:w-[40%] lg:w-[35%] relative md:top-[50px] lg:top-[100px] md:left-0 lg:left-[50px] sm:mt-6 md:mt-0">
         {/* Step 1 */}
         <div className="flex items-start">
           <div className="flex flex-col items-center">

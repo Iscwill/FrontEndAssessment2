@@ -101,12 +101,8 @@ const InstrumentTable = () => {
 
   return (
     <div className="w-full">
-      <div className="text-center mb-6">
-        <h1 className="text-red-500 font-light text-4xl mb-16">
-          {t("instrumentTable.heading")}
-        </h1>
-      </div>
-      <div className="flex flex-col lg:flex-row gap-10 ">
+      
+      <div className="flex flex-col lg:flex-row gap-10 mt-6">
         {/* Left Section */}
         <div className="lg:w-1/3">
           <h2 className="text-red-500 font-semibold text-lg mb-2">

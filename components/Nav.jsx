@@ -87,7 +87,7 @@ const Nav = () => {
       <hr className="hidden md:block" />
 
       {/* Navigation Links (Always visible for md and larger) */}
-      <div className="nav-links hidden md:flex gap-6 items-center justify-center mt-4">
+      <div className="nav-links hidden md:flex gap-6 items-center justify-center mt-4 mb-4">
         <Link href="/trading" className={getActiveClass("/trading")}>
           {t("nav.menu.trading")}
         </Link>

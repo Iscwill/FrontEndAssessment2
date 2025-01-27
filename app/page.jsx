@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <section className="flex flex-col items-center">
       {/* Banner */}
-      <div className="my-[20px] w-full">
+      <div className=" w-full">
         <Banner />
       </div>
 

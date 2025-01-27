@@ -43,7 +43,7 @@ const BrandIntroduce = () => {
           </div>
 
           {/* Right Section (Second and Third Cards) */}
-          <div className="z-20 flex flex-col gap-8 flex-[2] mt-[5%] lg:mt-0">
+          <div className="z-20 flex flex-col gap-8 flex-[2] lg:mt-0">
             {/* Second Card */}
             <div className="brand_card2 relative top-8 md:top-0 lg:top-[30px] bg-white p-4 sm:p-6 lg:p-8 border border-gray-300 rounded-lg min-w-[250px] sm:min-w-[300px] md:min-w-[350px] lg:min-w-[420px] lg:h-[200px]">
               <h2 className="text-lg font-bold mb-4">
